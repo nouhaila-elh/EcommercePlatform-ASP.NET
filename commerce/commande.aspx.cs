@@ -12,9 +12,9 @@ namespace commerce
         DCDataContext dc = new DCDataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
-           /* Object nom = Session["nom"];
+            Object nom = Session["nom"];
             if (nom == null)
-                Response.Redirect("authentifier.aspx"); */
+                Response.Redirect("authentifier.aspx"); 
             
         }
 

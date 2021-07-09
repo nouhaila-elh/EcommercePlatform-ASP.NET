@@ -17,21 +17,23 @@
             <br />
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Article commandée :
-            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="libelle" DataValueField="libelle" Height="40px" Width="169px">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Article commandée "></asp:Label>
+&nbsp;<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="libelle" DataValueField="libelle" Height="45px" Width="199px" style="margin-left: 3px">
             </asp:DropDownList>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Database1ConnectionString %>" SelectCommand="SELECT [libelle] FROM [t_article]"></asp:SqlDataSource>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Client Email :
-            <asp:TextBox ID="TextBox1" runat="server" Height="25px" Width="197px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Client Email  "></asp:Label>
+&nbsp;<asp:TextBox ID="TextBox1" runat="server" Height="25px" Width="197px" style="margin-left: 71px"></asp:TextBox>
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quantité&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;
-            <asp:TextBox ID="TextBox2" runat="server" Height="25px" Width="197px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Quantité  "></asp:Label>
+            &nbsp;
+            <asp:TextBox ID="TextBox2" runat="server" Height="25px" Width="197px" style="margin-left: 104px"></asp:TextBox>
             <br />
             <br />
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id :
-            <asp:TextBox ID="TextBox3" runat="server" Height="25px" Width="197px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="X-Large" Text="ID  "></asp:Label>
+&nbsp;<asp:TextBox ID="TextBox3" runat="server" Height="25px" Width="197px" style="margin-left: 174px; margin-right: 0px"></asp:TextBox>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />

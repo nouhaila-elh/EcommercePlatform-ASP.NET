@@ -31,4 +31,11 @@
       <Column Name="prix_totale" Type="System.Double" DbType="Float" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.t_Client" Member="t_Client">
+    <Type Name="t_Client">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="client_nom" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="pawd" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

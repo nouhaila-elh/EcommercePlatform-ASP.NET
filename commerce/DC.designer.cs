@@ -42,6 +42,9 @@ namespace commerce
     partial void Insertt_commande(t_commande instance);
     partial void Updatet_commande(t_commande instance);
     partial void Deletet_commande(t_commande instance);
+    partial void Insertt_Client(t_Client instance);
+    partial void Updatet_Client(t_Client instance);
+    partial void Deletet_Client(t_Client instance);
     #endregion
 		
 		public DCDataContext() : 
@@ -103,6 +106,14 @@ namespace commerce
 			get
 			{
 				return this.GetTable<t_commande>();
+			}
+		}
+		
+		public System.Data.Linq.Table<t_Client> t_Client
+		{
+			get
+			{
+				return this.GetTable<t_Client>();
 			}
 		}
 	}
@@ -594,6 +605,116 @@ namespace commerce
 					this._prix_totale = value;
 					this.SendPropertyChanged("prix_totale");
 					this.Onprix_totaleChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.t_Client")]
+	public partial class t_Client : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _client_nom;
+		
+		private string _pawd;
+		
+    #region Définitions de méthodes d'extensibilité
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void Onclient_nomChanging(string value);
+    partial void Onclient_nomChanged();
+    partial void OnpawdChanging(string value);
+    partial void OnpawdChanged();
+    #endregion
+		
+		public t_Client()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_client_nom", DbType="VarChar(40)")]
+		public string client_nom
+		{
+			get
+			{
+				return this._client_nom;
+			}
+			set
+			{
+				if ((this._client_nom != value))
+				{
+					this.Onclient_nomChanging(value);
+					this.SendPropertyChanging();
+					this._client_nom = value;
+					this.SendPropertyChanged("client_nom");
+					this.Onclient_nomChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pawd", DbType="VarChar(40)")]
+		public string pawd
+		{
+			get
+			{
+				return this._pawd;
+			}
+			set
+			{
+				if ((this._pawd != value))
+				{
+					this.OnpawdChanging(value);
+					this.SendPropertyChanging();
+					this._pawd = value;
+					this.SendPropertyChanged("pawd");
+					this.OnpawdChanged();
 				}
 			}
 		}

@@ -75,8 +75,10 @@
     </Content>
     <Content Include="articles.aspx" />
     <Content Include="authentifier.aspx" />
+    <Content Include="authentifier_client.aspx" />
     <Content Include="categorie.aspx" />
     <Content Include="commande.aspx" />
+    <Content Include="commande_client.aspx" />
     <Content Include="gestArticle.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -102,6 +104,13 @@
     <Compile Include="authentifier.aspx.designer.cs">
       <DependentUpon>authentifier.aspx</DependentUpon>
     </Compile>
+    <Compile Include="authentifier_client.aspx.cs">
+      <DependentUpon>authentifier_client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="authentifier_client.aspx.designer.cs">
+      <DependentUpon>authentifier_client.aspx</DependentUpon>
+    </Compile>
     <Compile Include="categorie.aspx.cs">
       <DependentUpon>categorie.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,6 +124,13 @@
     </Compile>
     <Compile Include="commande.aspx.designer.cs">
       <DependentUpon>commande.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="commande_client.aspx.cs">
+      <DependentUpon>commande_client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="commande_client.aspx.designer.cs">
+      <DependentUpon>commande_client.aspx</DependentUpon>
     </Compile>
     <Compile Include="DC.designer.cs">
       <AutoGen>True</AutoGen>
