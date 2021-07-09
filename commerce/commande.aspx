@@ -56,7 +56,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" style="margin-left: 22px">
+                <AlternatingRowStyle BackColor="#F7F7F7" />
                 <Columns>
                     <asp:BoundField DataField="Article_commandee" HeaderText="Article_commandee" SortExpression="Article_commandee" />
                     <asp:BoundField DataField="Quantite" HeaderText="Quantite" SortExpression="Quantite" />
@@ -64,6 +65,15 @@
                     <asp:BoundField DataField="Date_commande" HeaderText="Date_commande" SortExpression="Date_commande" />
                     <asp:BoundField DataField="prix_totale" HeaderText="prix_totale" SortExpression="prix_totale" />
                 </Columns>
+                <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+                <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <SortedAscendingCellStyle BackColor="#F4F4FD" />
+                <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+                <SortedDescendingCellStyle BackColor="#D8D8F0" />
+                <SortedDescendingHeaderStyle BackColor="#3E3277" />
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Database1ConnectionString %>" SelectCommand="SELECT [Article_commandee], [Quantite], [Client_email], [Date_commande], [prix_totale] FROM [t_commande]"></asp:SqlDataSource>
             <br />
